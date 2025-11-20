@@ -1,10 +1,14 @@
+:root {
+  --font-color: white;
+}
+
 body {
   height: 100vh;
   display: flex;
 }
 
 main {
-  flex: 3;
+  flex: 4;
   display: flex;
   flex-direction: column;
 }
@@ -17,8 +21,36 @@ main :last-child {
   flex: 3;
 }
 
-aside {
+nav {
   flex: 1;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 4fr;
+  grid-auto-rows: 64px;
+  align-items: center;
+  padding-left: 16px;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+  color: var(--font-color);
+  background-color: rgb(17, 119, 251);
+}
+
+nav img {
+  height: 24px;
+  justify-self: center;
+  /* Change the color from black to pure white */
+  filter: invert(100%);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+nav :nth-child(1){
+  height: 40px;
+}
+
+nav :nth-child(2){
+  font-size: 1.5rem;
 }
